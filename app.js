@@ -1,63 +1,25 @@
-// var inp = document.getElementById('inp')
-// var render = document.getElementById('render')
-// var ul=document.getElementById('list')
-// var obj;
-// var arr = []
-// var i;
-// function submit(e){
-//     e.preventDefault()
-//   obj = {
-//         task:inp.value,
-//         dateTime:new Date()
-//     }
-// arr.push(obj);
-// console.log(inp.value)
-// show()
-// }
-// function show(){
-//     ul.innerHTML = ''
-//     for( i = 0 ; i<=arr.length ; i++){
-//         ul.innerHTML+= `<li class="edit">${arr[i].task}<button onclick="del_all()">delete</button>
-//         <button onclick="edit(${i})">edit</button><span>${arr[i].dateTime}</span><br>
-//         </li>`
-//     }
-// }
-// function del_all(){
-//     ul.innerHTML=""
-// }
-// function edit(e){
-//     console.log(e,"<==id")
-//     var update = prompt('ENTER YOUR TODO:') 
-//     let old = arr[e].task
-//     for( i = 0 ; i<arr.length ; i++){
-//         let newli = document.getElementsByClassName('edit');
-//         if (newli[i].firstChild.nodeValue==old){
-//         newli[i].firstChild.nodeValue=update;
-//        }
-//     }
-// }
+let obj = [
+  "https://media.gettyimages.com/id/1297349747/photo/hot-air-balloons-flying-over-the-botan-canyon-in-turkey.jpg?s=612x612&w=gi&k=20&c=Uo_yzYm9UJu6GpKilOLGrCbiSjyMB5DsvZTYpybYxj4=",
+  "https://www.shutterstock.com/image-photo/high-mountain-morning-time-beautiful-260nw-1384588922.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8J1l-rceZJyefqnMdLtIaqX2q72MoEZJJ4Q&usqp=CAU",
+  "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=6hCgXAzeqhu-lU1yTwe2o4rtS4jI2PVC6_MRqvOjORg=",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMma1RsDUuSNsB1CLxhrSbNJH9OApmgGQndQ&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkuP4A26vUkEZwYJL4zGV8KRxUbBmcX11Mdw&usqp=CAU",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png",
+  "https://t3.ftcdn.net/jpg/02/01/21/90/360_F_201219029_69S3Oy0WMLN7bl1GTbxMAUNZkQhJmjbj.jpg",
+  "https://thumbs.dreamstime.com/z/double-exposure-image-businessman-using-smartphone-sunrise-overlay-cityscape-concept-modern-life-business-123301987.jpg",
+  "https://loveshayariimages.in/wp-content/uploads/2022/05/nature-Simple-Whatsapp-Dp-Profile-Images-photo-hd.gif",
+  "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+  "https://images.unsplash.com/photo-1575881875475-31023242e3f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"];
 
+var img = document.getElementsByTagName("img");
+var src = document.createAttribute("src");
+var count=0;
 
-
-
-
-// let string = ""
-// var bttn = document.querySelectorAll('.bttn')
-// // var inp = document.getElementById('inp')
-// Array.from(bttn).forEach(bttn =>
-//     bttn.addEventListener('click', (e) => {
-//         if (e.target.innerHTML == "=") {
-//             string = eval(string)
-//             document.querySelector(' input').value = string
-//         } else if (e.target.innerHTML == "AC") {
-//             string = ""
-//             document.querySelector(' input').value = string
-//         } else {
-
-//             console.log(e.target)
-//             string = string + e.target.innerHTML;
-//             document.querySelector(' input').value = string
-//         }
-//     })
-// )
-
+function image() {
+    if (count < obj.length) {
+      src.value=obj[count];
+      img[0].setAttributeNode(src);
+    }
+    count = count + 1;
+}
