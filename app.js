@@ -41,23 +41,23 @@
 
 
 
-let string = ""
-var bttn = document.querySelectorAll('.bttn')
-// var inp = document.getElementById('inp')
-Array.from(bttn).forEach(bttn =>
-    bttn.addEventListener('click', (e) => {
-        if (e.target.innerHTML == "=") {
-            string = eval(string)
-            document.querySelector(' input').value = string
-        } else if (e.target.innerHTML == "AC") {
-            string = ""
-            document.querySelector(' input').value = string
-        } else {
+// let string = ""
+// var bttn = document.querySelectorAll('.bttn')
+// // var inp = document.getElementById('inp')
+// Array.from(bttn).forEach(bttn =>
+//     bttn.addEventListener('click', (e) => {
+//         if (e.target.innerHTML == "=") {
+//             string = eval(string)
+//             document.querySelector(' input').value = string
+//         } else if (e.target.innerHTML == "AC") {
+//             string = ""
+//             document.querySelector(' input').value = string
+//         } else {
 
-            console.log(e.target)
-            string = string + e.target.innerHTML;
-            document.querySelector(' input').value = string
-        }
-    })
-)
+//             console.log(e.target)
+//             string = string + e.target.innerHTML;
+//             document.querySelector(' input').value = string
+//         }
+//     })
+// )
 
